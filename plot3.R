@@ -1,6 +1,8 @@
+#Load lubridate and dplyr
 library(lubridate)
 library(dplyr)
 
+#Download Url 
 fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(fileUrl, destfile = "household_power_consumption.txt", method="curl")
 
@@ -26,7 +28,7 @@ max
 
 #Plot sub_metering data
 plot(feb_data$xtick, feb_data$Sub_metering_1, type="l",  xlab="",
-     ylab="Energy Sub Metering")
+     ylab="Energy Sub Metering", pin=(480,480))
 par(new=TRUE)
 plot(feb_data$Sub_metering_2, type="l", xaxt="n", xlab="",
      ylab="Energy Sub Metering", col="red",  ylim=c(0,38))

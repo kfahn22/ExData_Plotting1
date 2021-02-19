@@ -1,6 +1,8 @@
+#Load lubridate and dplyr
 library(lubridate)
 library(dplyr)
 
+#Download Url
 fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(fileUrl, destfile = "household_power_consumption.txt", method="curl")
 
@@ -18,9 +20,10 @@ df2$xtick <- dmy_hms(df1$date_time)
 feb_data <- df2[(df2$Date == "1/2/2007" | df2$Date 
                  == "2/2/2007"), ]
 
+
 ## Create plot of day of week versus Global Active Power
 plot(feb_data$xtick, feb_data$Global_active_power, type="l",  xlab="",
-     ylab="Global Active Power (kilowatts)")
+     ylab="Global Active Power (kilowatts)", cex.lab = .8, cex.axis=.8, font=2)
 
 ##Copy my plot to png file
 png(file="plot2.png", width = 480, height = 480)

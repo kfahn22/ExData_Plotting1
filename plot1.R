@@ -1,6 +1,8 @@
+#Load lubridate and dplyr
 library(lubridate)
+library(dplyr)
 
-##download file URL
+##Download file URL
 fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(fileUrl, destfile = "household_power_consumption.txt", method="curl")
 
