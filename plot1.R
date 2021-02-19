@@ -28,7 +28,7 @@ hist(feb_data$Global_active_power, col="red", main="Global Active Power",
      xlab="Global Active Power (kilowatts)")
 
 ##Copy my plot to png file
-png(file="plot1.png",  width = 480, height = 480)
+dev.copy(png, file="plot1.png")
 
 ## Close the PNG device
 dev.off()

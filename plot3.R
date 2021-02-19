@@ -41,7 +41,7 @@ legend("topright", col=c("black", "red", "blue"), lty= 1, seg.len=2, legend = c(
                  "Sub_metering_2", "Sub_metering_3"), pt.cex = .8)
 
 ##Copy my plot to png file
-png(file="plot3.png", width = 480, height = 480)
+dev.copy(png, file="plot3.png")
 
 ## Close the PNG device
 dev.off()

@@ -26,7 +26,7 @@ plot(feb_data$xtick, feb_data$Global_active_power, type="l",  xlab="",
      ylab="Global Active Power (kilowatts)", cex.lab = .8, cex.axis=.8, font=2)
 
 ##Copy my plot to png file
-png(file="plot2.png", width = 480, height = 480)
+dev.copy(png, file="plot2.png")
 
 ## Close the PNG device
 dev.off()

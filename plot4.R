@@ -57,7 +57,7 @@ plot(feb_data$xtick, feb_data$Global_reactive_power, type="l",  xlab="datetime",
      ylab="Global_Reactive_Power", cex.lab = .8, cex.axis=.6, font=2)
 
 ##Copy my plot to png file
-png(file="plot4.png", width = 480, height = 480)
+dev.copy(png, file="plot4.png")
 
 ## Close the PNG device
 dev.off()
