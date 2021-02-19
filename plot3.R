@@ -28,7 +28,7 @@ max
 
 #Plot sub_metering data
 plot(feb_data$xtick, feb_data$Sub_metering_1, type="l",  xlab="",
-     ylab="Energy Sub Metering", pin=(480,480))
+     ylab="Energy Sub Metering")
 par(new=TRUE)
 plot(feb_data$Sub_metering_2, type="l", xaxt="n", xlab="",
      ylab="Energy Sub Metering", col="red",  ylim=c(0,38))
